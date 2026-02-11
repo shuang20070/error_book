@@ -1,0 +1,21 @@
+# Python缓存
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django
+*.log
+db.sqlite3
+media/
+static/
+
+# IDE配置
+.idea/
+.vscode/
+
+# 虚拟环境
+.venv/
+
+# 系统文件
+*.tmp
+*.bak

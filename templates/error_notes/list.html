@@ -1,0 +1,19 @@
+{% extends 'error_notes/base.html' %}
+
+{% block title %}错题列表{% endblock %}
+
+{% block content %}
+<h2>全部错题</h2>
+
+{% for error in errors %}
+<div class="error-item">
+    <h3><a href="{% url 'error_detail' error.pk %}">{{ error.title }}</a></h3>
+    <p><strong>知识点：</strong>{{ error.tags.all|join:", " }}</p>
+    <p><strong>创建时间：</strong>{{ error.create_at|date:"Y-m-d H:i" }}</p>
+</div>
+{% empty %}
+<div class="error-item">
+    <p style="text-align: center; color: #666;">暂无错题，快去后台添加几道吧！</p>
+</div>
+{% endfor %}
+{% endblock %}

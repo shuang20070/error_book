@@ -1,0 +1,17 @@
+{% extends 'error_notes/base.html' %}
+
+{% block title %}{{ error.title }}{% endblock %}
+
+{% block content %}
+<h2>{{ error.title }}</h2>
+<div class="error-item">
+    <p><strong>知识点：</strong>{{ error.tags.all|join:", " }}</p>
+    <p><strong>题目内容：</strong>{{ error.content }}</p>
+    <p><strong>我的答案：</strong>{{ error.my_answer }}</p>
+    <p><strong>正确答案：</strong>{{ error.correct_answer }}</p>
+    <p><strong>错题解析：</strong>{{ error.analysis }}</p>
+</div>
+<p style="margin-top: 20px;">
+    <a href="{% url 'error_list' %}">← 返回错题列表</a>
+</p>
+{% endblock %}
