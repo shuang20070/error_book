@@ -1,0 +1,17 @@
+# Django 核心框架
+Django>=4.2,<5.0
+
+# 数据库驱动（如果使用 MySQL，取消下面两行的注释）
+# mysqlclient>=2.2.0
+# PyMySQL>=1.1.0
+
+# 开发与调试工具
+django-debug-toolbar>=4.2.0
+django-extensions>=3.2.3
+
+# 表单与验证
+django-crispy-forms>=2.0
+crispy-bootstrap5>=0.7
+
+# 静态文件管理（可选）
+django-compressor>=4.4
