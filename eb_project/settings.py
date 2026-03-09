@@ -60,7 +60,7 @@ import os
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [BASE_DIR / 'templates'],  # 新增：全局模板文件夹
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,3 +130,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import os
 AUTH_USER_MODEL = 'accounts.User'
+# 2. 静态文件配置（文件末尾添加）
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']  # 静态文件存放目录
